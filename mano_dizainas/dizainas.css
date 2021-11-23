@@ -1,8 +1,17 @@
 p {
     color: red;
 }
-ul {
+li {
     color: blue;
 }
 
-li:
+li:nth-child(2)
+{
+    width: 100px;
+    height: 100px;
+}
+li:nth-child(2) {color: red}
+
+li:nth-child(2) {
+    font-weight: bold;
+}
