@@ -1,0 +1,879 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NFKFDK2');</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.eu01.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"231cf5937b",applicationID:"20572312"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<title>Dangiško grožio nuotraukos (foto) | Sveikata.lt</title>
+<link rel="shortcut icon" href="https://sveikata.tv3.lt/app/assets/favicon_sveikata.ico" />
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.sveikata.lt/straipsnis/dangisko-grozio-nuotraukos-foto-2704" />
+<meta name="description" content="Dangus – nemokamas grožio ir nesibaigiančio įkvėpimo šaltinis. Ar kada susimąstėte, kiek kartų žiūrėjote pakėlę į jį akis ir tiesiog mėgavotės žydryne? Darykite tai kaip galima dažniau!" />
+<meta property="fb:app_id" content="343872238960461" />
+<meta property="og:site_name" content="Sveikata.lt" />
+<meta property="og:locale" content="lt_LT" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Dangiško grožio nuotraukos (foto)" />
+<meta property="og:url" content="http://sveikata.tv3.lt/straipsnis/dangisko-grozio-nuotraukos-foto-2704" />
+<meta property="og:image" content="https://sveikata.tv3.lt/uploads/modules/articles/original/2015/05/2704.jpg" />
+<meta property="og:description" content="Dangus – nemokamas grožio ir nesibaigiančio įkvėpimo šaltinis. Ar kada susimąstėte, kiek kartų žiūrėjote pakėlę į jį akis ir tiesiog mėgavotės žydryne? Darykite tai kaip galima dažniau!" />
+<meta property="publish_time" content="2015-05-07 07:58" />
+<link rel="canonical" href="https://sveikata.tv3.lt/straipsnis/dangisko-grozio-nuotraukos-foto-2704" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://sveikata.tv3.lt/app/assets/css/reset-sveikata.css?t=1487081779" media="screen" />
+<link rel="stylesheet" type="text/css" href="https://sveikata.tv3.lt/app/assets/css/fonts-sveikata.css?t=1323966673" media="screen" />
+<link rel="stylesheet" type="text/css" href="https://sveikata.tv3.lt/app/assets/css/style-sveikata.css?t=1542965276" media="screen" />
+<link rel="stylesheet" type="text/css" href="https://sveikata.tv3.lt/app/assets/css/slider-sveikata.css?t=1411706784" media="screen" />
+<script src="https://sveikata.tv3.lt/app/assets/js/jquery.js" type="text/javascript"></script>
+<script src="https://sveikata.tv3.lt/app/assets/js/mobileDetect.js?v4" type="text/javascript"></script>
+<script src="https://sveikata.tv3.lt/app/assets/js/main.js?1" type="text/javascript"></script>
+<script type="text/javascript">
+            var WEBROOT = 'https://sveikata.tv3.lt';
+            var WEBROOT_PATH = 'https://sveikata.tv3.lt';
+            var LANG = 'lt';
+            var CALENDAR_DATE = '2021-11-20';
+        </script>
+<script type="text/javascript" src="https://sveikata.tv3.lt/app/assets/js/main-sveikata.js?t=1634886711"></script>
+<script type="text/javascript" src="https://sveikata.tv3.lt/app/assets/js/polls.js?t=1323966673"></script>
+<script type="text/javascript" src="https://sveikata.tv3.lt/app/assets/js/items.js?t=1323966673"></script>
+<script type="text/javascript" src="https://sveikata.tv3.lt/app/assets/js/jquery.cookie.js?t=1338973119"></script>
+<script type="text/javascript" src="https://sveikata.tv3.lt/app/assets/js/general.js?t=1486133368"></script>
+<script type="text/javascript" src="https://sveikata.tv3.lt/app/assets/js/general.classes.js?t=1549880314"></script>
+<script type="text/javascript" src="https://sveikata.tv3.lt/app/assets/js/jquery.sticky.js?t=1351062732"></script>
+<script type="text/javascript" src="https://sveikata.tv3.lt/app/assets/js/jquery.easing.1.3.js?t=1323966673"></script>
+<script type="text/javascript" src="https://sveikata.tv3.lt/app/assets/js/jquery.coda-slider-2.0.js?t=1323966673"></script>
+<script type="text/javascript">
+            $(function () {
+                $('#middle_block').floatingWidget({'footerSelector':'.footer', 'paddingTop':0, 'paddingBottom':8});
+                jQuery(window).resize(function(){
+                    if(jQuery(window).width() > 1200 && !jQuery(document.body).hasClass('force')) {
+                        jQuery(document.body).removeClass('w1000');
+                    } else {
+                        jQuery(document.body).addClass('w1000');
+                        if(!jQuery(document.body).hasClass('force')) $.cookie("smallScreen", "yes")
+                    }
+                }).trigger('resize');
+            });
+        </script>
+<script type="text/javascript">
+            $(document).ready(function(){
+                $().ready(function() {
+                        $('#coda-slider-1').codaSlider({
+                            firstPanelToLoad: 2
+                        });
+                        $('#coda-slider-2').codaSlider();
+                        $('#coda-slider-3').codaSlider(); 
+                });
+            });
+        </script>
+<script>
+                    var mapas = {
+                        214: 'sv980x200_sveikata.lt',
+                        215: 'sv300x600_1d_sveikata.lt',
+                        217: 'sv300x600_2d_sveikata.lt',
+                        220: 'sv300x600_5d_sveikata.lt',
+                        453: 'sv200x700_sveikata.lt',
+                        1007: 'spec1_rubrikosremimas_sveikata.lt',
+                        890: 'sv300x250_mobile_t1_m.sveikata.lt',
+                        950: 'sv300x250_mobile_t2_m.sveikata.lt',
+                        952: 'sv300x250_mobile_v1_m.sveikata.lt',
+                        1073: 'sv300x250_mobile_v3_r_m.sveikata.lt',
+                        792: 'sv468x60_sveikata.lt',
+                        226: 'sv500x150_2v_sveikata.lt',
+                        708: 'sv390x150_specialistu_blokas_sveikata.lt',
+                        219: 'sv300x600_4d_sveikata.lt',
+                        223: 'sv300x600_10d_sveikata.lt',
+                        218: 'sv300x600_3d_sveikata.lt',
+                        300: 'sv300x600_9d_sveikata.lt',
+                        951: 'sv300x250_mobile_t3_m.sveikata.lt',
+                        221: 'sv300x600_6d_sveikata.lt',
+                        222: 'sv300x600_7d_sveikata.lt',
+                        224: 'sv300x600_8d_sveikata.lt',
+                        953: 'sv300x250_mobile_v2_m.sveikata.lt'
+                    };
+                </script>
+<script type='text/javascript' src='https://partner.googleadservices.com/gampad/google_service.js'>
+        </script>
+<script type='text/javascript'>
+        GS_googleAddAdSenseService("ca-pub-9961216188829551");
+        GS_googleEnableAllServices();
+        </script>
+<script type="text/javascript">
+            var myKeys = "sveikata.tv3.lt/straipsnis/dangisko-grozio-nuotraukos-foto-2704";
+                            myKeys = myKeys + ",dangisko grozio nuotraukos  foto,idomybes,sveikas gyvenimas,idomybes,gamtos fotografija,dangaus fotografija,zvaigzdes,zvaigzdynai";
+                                        myKeys = myKeys + 'sveikas-gyvenimo-budas,idomybes,pilnas-straipsnis';
+                    </script>
+<script type='text/javascript'>
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_1000x100");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_1x1");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_300x250_1d");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_300x250_2d");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_300x250_3d");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_370x100_1d");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_370x100_2d");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_370x100_3d");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_500x150_v1");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_500x150_v2");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_500x150_v3");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_Shop_TITLE_370x300");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_200x600_special");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_390x150_specialistu_blokas");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_468x60");
+        GA_googleAddSlot("ca-pub-9961216188829551", "Sveikata_180x150");
+        GA_googleAddSlot("ca-pub-9961216188829551", " Sveikata_300x250_4d");
+        </script>
+<script type='text/javascript'>
+        GA_googleFetchAds();
+        </script>
+
+<script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+
+var pp_gemius_identifier = new String('opuQ.T7r.1nQAWOgZT3J1sd.33l80nr45RiXUqY9FhP.Z7');
+
+        //--><!]]>
+        </script>
+<script type="text/javascript">
+            <!--//--><![CDATA[//><!--
+            // lines below shouldn't be edited
+            function gemius_pending(i) { window[i] = window[i] || function() {var x = window[i+'_pdata'] = window[i+'_pdata'] || []; x[x.length]=arguments;};};
+            gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event');
+            (function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0],l='http'+((location.protocol=='https:')?'s':''); gt.setAttribute('async','async');
+                gt.setAttribute('defer','defer'); gt.src=l+'://galt.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script');
+            //--><!]]>
+        </script>
+<meta name="google-site-verification" content="ADSOgSv6GyNokCvLF6LgpYyxMsN-WPuuGpkSeRwRtNo" />
+<script>
+                var EadsRps = {
+                    'showRegion': function(k){
+                        document.write('<div id="'+ (mapas[k]||k) +'"/></div>');
+                    }
+                };
+            </script>
+
+<script type="text/javascript">EadsRps.showRegion(1007);</script>
+</head>
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFKFDK2"
+                              height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="header-b">
+<script type="text/javascript">EadsRps.showRegion(214);</script>
+</div>
+<div class="container">
+
+<div class="menu">
+<div class="menu-main">
+<a href="https://sveikata.tv3.lt/"><img class="logo" src="https://sveikata.tv3.lt/app/assets/img/sveikata/logo.png" alt="" /></a>
+<span class="moreSpaces">
+<ul>
+<li class="forCategoryName" data-slug="sveikata-lt-tv"><a href="https://sveikata.tv3.lt/kategorija/sveikata-lt-tv">SVEIKATA.LT TV</a></li>
+<li class="forCategoryName" data-slug="brandzios-moters-sveikata"><a href="https://sveikata.tv3.lt/kategorija/brandzios-moters-sveikata">BRANDŽIOS MOTERS SVEIKATA</a></li>
+<li class="forCategoryName" data-slug="sveikas-gyvenimo-budas"><a class="active" href="https://sveikata.tv3.lt/kategorija/sveikas-gyvenimo-budas">SVEIKAS GYVENIMAS</a></li>
+<li class="forCategoryName" data-slug="seimos-sveikata"><a href="https://sveikata.tv3.lt/kategorija/seimos-sveikata">ŠEIMOS SVEIKATA</a></li>
+<li class="hiddenElements" style="position:relative; visibility:visible">
+<a class="item hiddenLinkMain" href="javascript:void(0);" style="white-space:nowrap;" onclick="$(this).parent().toggleClass('active');">
+<span>DAUGIAU</span>
+</a>
+<ul class="hiddenLinks" style="clear:left;">
+ <li class="forCategoryName hiddenLink" data-slug="grozis-ir-sveikata"><a href="https://sveikata.tv3.lt/kategorija/grozis-ir-sveikata">GROŽIS IR SVEIKATA</a></li>
+<li class="forCategoryName hiddenLink" data-slug="/ligu-katalogas"><a href="/ligu-katalogas">LIGŲ KATALOGAS</a></li>
+<li class="forCategoryName hiddenLink" data-slug="specialist-konsultacija"><a href="https://sveikata.tv3.lt/kategorija/specialist-konsultacija">KONSULTACIJOS</a></li>
+</ul>
+</li>
+</ul>
+</span>
+</div>
+<div class="menu-sub">
+<ul>
+<li><a href="https://sveikata.tv3.lt/subkategorija/sveikas-gyvenimo-budas/sveiki-sanariai">Sveiki sąnariai</a><span>|</span></li>
+<li><a href="https://sveikata.tv3.lt/subkategorija/sveikas-gyvenimo-budas/dietos">Mityba</a><span>|</span></li>
+<li><a href="https://sveikata.tv3.lt/subkategorija/sveikas-gyvenimo-budas/ekologi-ki-namai">Namai ir buitis</a><span>|</span></li>
+<li><a href="https://sveikata.tv3.lt/subkategorija/sveikas-gyvenimo-budas/aplinkosauga">Aplinkosauga</a><span>|</span></li>
+<li><a href="https://sveikata.tv3.lt/subkategorija/sveikas-gyvenimo-budas/receptai">Receptai</a><span>|</span></li>
+<li><a href="https://sveikata.tv3.lt/subkategorija/sveikas-gyvenimo-budas/idomybes">Įdomybės</a><span>|</span></li>
+<li><a href="https://sveikata.tv3.lt/subkategorija/sveikas-gyvenimo-budas/sportas">Sportas</a></li>
+</ul>
+</div>
+</div>
+ 
+<div class="content clearfix">
+<div class="left">
+<div class="block forArticle">
+<div class="inner" data-slug="sveikas-gyvenimo-budas">
+<div class="articleBlock" data-slug="sveikas-gyvenimo-budas">
+
+<div class="breadcrumbs">
+<a href="https://sveikata.tv3.lt/">Sveikata.lt</a>
+<span>»<span>
+<a href="https://sveikata.tv3.lt/kategorija/sveikas-gyvenimo-budas">Sveikas gyvenimas</a>
+<span>»<span>
+<a href="https://sveikata.tv3.lt/subkategorija/sveikas-gyvenimo-budas/idomybes">Įdomybės</a>
+</div>
+
+<div class="heading clearfix">
+<h2>Dangiško grožio nuotraukos (foto)</h2>
+<div class="navigation">
+<a title="Kaip mūsų organizmas išduoda sveikatos problemas (I dalis)" href="https://sveikata.tv3.lt/straipsnis/kaip-musu-organizmas-isduoda-sveikatos-problemas-i-dalis-2705" class="prev"><!-- --></a>
+<a title="Veidrodiniai peizažai (foto)" href="https://sveikata.tv3.lt/straipsnis/veidrodiniai-peizazai-foto-2703" class="next ml10"><!-- --></a>
+</div>
+</div>
+
+<div class="buttons">
+<div class="fl mb15">
+<div class="fb-like" data-send="false" data-href="http://sveikata.tv3.lt/straipsnis/dangisko-grozio-nuotraukos-foto-2704" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+</div>
+</div>
+
+
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/580x300/2015/05/dangisko-grozio-nuotraukos-foto-2704.jpg?t=1431017964" alt="Dangiško grožio nuotraukos (foto)">
+<div class="clear"></div>
+<script type="text/javascript">EadsRps.showRegion(792);</script>
+<div class="article" data-slug="text-sveikas-gyvenimo-budas">
+<div class="clear"></div>
+<div id="intext">
+<p style="text-align: justify;">
+<strong>Dangus &ndash; nemokamas grožio ir nesibaigiančio įkvėpimo &scaron;altinis. Ar kada susimąstėte, kiek kartų žiūrėjote pakėlę į jį akis ir tiesiog mėgavotės žydryne? Darykite tai kaip galima dažniau!</strong><br />
+&nbsp;<br />
+Na, o jeigu gyvenate mieste ir pasigrožėti žvaigždėmis jums kliudo &scaron;viesos, peržvelkite bent &scaron;į rinkinuką.<br />
+<img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/1-aba8daa99c746dcdbf92e29b1a344543ca5d0d62.jpg" style="height: 626px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/10-db364613525f0006ea5a031a4d68f25c674770a5.jpg" style="height: 744px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/11-31206655d9a5f94c22250ab31476792ccd0bda5e.jpg" style="height: 386px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/12-99ff0875e8300bfef075a7be07d3c0ebfc9f6c43.jpg" style="height: 386px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/14-22738729c92d929c53c10b9c994cdf49a80cb106.jpg" style="height: 385px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/15-15cafe9ac1c1a84c4544efe31ee3df90271b77be.jpg" style="height: 580px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/16-79b0cabb6850b1c4889866d7bc7dbd37ac984c86.jpg" style="height: 870px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/17-d028d87b98e9b44319653c3195cea5d496b80f78.jpg" style="height: 580px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/18-b63d7b8bfa04083ffa7a9f244eb7419af6d9eb6a.jpg" style="height: 384px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/19-9bf05b1371c08e89db7a693cce9019248872919f.jpg" style="height: 580px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/2-f5b35709229c0d55b86373a3309e2ba6195cc07c.jpg" style="height: 579px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/20-2a46beb61a29a1d6b1157016d5dec00c52287e42.jpg" style="height: 580px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/3-0e37f4b15dc7b0fabfc0dfb7eb5a7d005b7a5557.jpg" style="height: 580px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/4-9654b2404846a8c6e53f175aadf957a51547b42f.jpg" style="height: 387px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/5-eb59c7fb2570bbce6bf419f7c5def395bcd8c534.jpg" style="height: 304px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/6-e0c764f0e12540a78cedc88a47aa76bc36546d59.jpg" style="height: 384px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/7-5ef4432a8fd116463a19c62b2a019571cc4221c0.jpg" style="height: 422px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/8-4f59fb5395854e19904df34dbbafe032025145dc.jpg" style="height: 385px; width: 580px;" /><img src="https://idomybes.pasmama.tv3.lt/uploads/editor/image/2015/05/07/9-0286f832564e4cfb31f4f243ba14e1b005d43d81.jpg" style="height: 386px; width: 580px;" /></p>
+</div>
+</div>
+
+<div class="buttons clearfix">
+<div class="fl">
+<div class="fb-like" data-send="false" data-href="http://sveikata.tv3.lt/straipsnis/dangisko-grozio-nuotraukos-foto-2704" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+</div>
+<div class="navigation">
+<a title="Kaip mūsų organizmas išduoda sveikatos problemas (I dalis)" href="https://sveikata.tv3.lt/straipsnis/kaip-musu-organizmas-isduoda-sveikatos-problemas-i-dalis-2705" class="prev"><!-- --></a>
+<a title="Veidrodiniai peizažai (foto)" href="https://sveikata.tv3.lt/straipsnis/veidrodiniai-peizazai-foto-2703" class="next"><!-- --></a>
+</div>
+</div>
+<div class="holder580 bb-line">
+<div class="tags">
+<strong>Gairės: </strong>
+<a href="https://sveikata.tv3.lt/straipsniai-pagal-gaires/idomybes">
+įdomybės
+</a>
+, <a href="https://sveikata.tv3.lt/straipsniai-pagal-gaires/gamtos-fotografija">
+gamtos fotografija
+</a>
+, <a href="https://sveikata.tv3.lt/straipsniai-pagal-gaires/dangaus-fotografija">
+dangaus fotografija
+</a>
+, <a href="https://sveikata.tv3.lt/straipsniai-pagal-gaires/zvaigzdes">
+žvaigždės
+</a>
+,  <a href="https://sveikata.tv3.lt/straipsniai-pagal-gaires/zvaigzdynai">
+žvaigždynai
+</a>
+, <a href="https://sveikata.tv3.lt/straipsniu-paieska?keywords=nemokami foto nuotraukos">
+nemokami foto nuotraukos
+</a>
+</div>
+</div>
+</div>
+
+<div id="taboola-below-article-thumbnails-2nd"></div>
+<script type="text/javascript">
+      window._taboola = window._taboola || [];
+      _taboola.push({
+        mode: 'organic-thumbnails-b',
+        container: 'taboola-below-article-thumbnails-2nd',
+        placement: 'Below Article Thumbnails 2nd',
+        target_type: 'mix'
+      });
+    </script>
+<fb:comments href="http://sveikata.tv3.lt/straipsnis/dangisko-grozio-nuotraukos-foto?id=2704" num_posts="6" width="580"></fb:comments>
+<div class="tac">
+<script type="text/javascript">EadsRps.showRegion(226);</script>
+</div>
+<div id="article-comment" class="article-comments comments-box r9">
+<div class="inner" id="comments">
+<h2 class="bb-line">Komentarai <span class="article-comments-count">(1)</span></h2>
+<div class="comments-form-block">
+<noscript>Komentuojant JavaScript įskiepas būtinas</noscript>
+<form id="comments-form-item-2704" onsubmit="return Comments.submit(this, 'https://sveikata.tv3.lt/lt/comments/validateComment')" action="https://sveikata.tv3.lt/lt/comments/postComment" method="post" style="display:none;">
+<div style="display:none;">
+<input type="text" name="comment[username]" value="" autocomlete="off" />
+</div>
+<div class="author-image">
+<img src="https://sveikata.tv3.lt/app/assets/img/sveikata/avatar-50.png" width="50">
+</div>
+<div class="form-row">
+<label class="label" for="comment_author_name">Vardas:</label>
+<input id="comment_author_name" class="comment_input" type="text" name="comment[author][name]" />
+</div>
+<div class="form-row clearfix">
+<label class="label" for="comment_comments">Komentaras:</label>
+<textarea id="comment_comments" rows="2" maxlength="500" cols="50" name="comment[comment]"></textarea>
+<span class="chars-counter"><!-- --></span>
+</div>
+<div class="form-row clearfix">
+<input type="hidden" readonly="readonly" name="comment[access]" value="eb9de6a26e7ae8e6e67cd74601a1697b/857028721213c830fc9b2f74d33a28d7" />
+<input type="hidden" readonly="readonly" name="comment[module]" value="articles" />
+<input type="hidden" readonly="readonly" name="comment[itemId]" value="2704" />
+<input type="submit" class="button blue fr" value="komentuoti">
+</div>
+</form>
+<script type="text/javascript">
+        jQuery(document).ready(function(){
+           jQuery('#comments-form-item-2704').show();
+            new ObjectWatcher(jQuery('#comment_comments')).watchLength(function(maxLength, length){
+                jQuery('#comment_comments').next().text(maxLength - length);
+            });
+        });
+    </script>
+</div>
+
+<div class="comment-item first clearfix">
+<div class="comment-author-image">
+<img src="https://sveikata.tv3.lt/app/assets/img/sveikata/avatar-50.png" width="50" height="50">
+</div>
+<div class="comment-header">
+<span class="comment-author">Viktorija</span>
+<span class="comment-date">2021-11-07 09:40</span>
+</div>
+<div class="comment-comment">Vika</div>
+</div>
+<script type="text/javascript">
+                jQuery(document).ready(function(){
+                   Comments.preloader = '<img src="https://sveikata.tv3.lt/app/assets/img/preloader.gif" width="128" height="15" />';
+                   Comments.clearForm(jQuery('#article-comment .comments-form-block form'));
+                });
+            </script>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/7-kasdieniniai-dalykai-kurie-gali-isprovuokuoti-smegenu-uztemima-5396?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2021/10/7-kasdieniniai-dalykai-kurie-gali-isprovuokuoti-smegenu-uztemima-5396.jpg?t=1633934907" alt="7 kasdieniniai dalykai, kurie gali išprovuokuoti smegenų „užtemimą“" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/7-kasdieniniai-dalykai-kurie-gali-isprovuokuoti-smegenu-uztemima-5396?category=38"><strong>7 kasdieniniai dalykai, kurie gali išprovuokuoti smegenų „užtemimą“</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/7-kasdieniniai-dalykai-kurie-gali-isprovuokuoti-smegenu-uztemima-5396?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/mitai-ir-faktai-apie-mieguistuma-ir-kova-su-juo-5394?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2021/10/mitai-ir-faktai-apie-mieguistuma-ir-kova-su-juo-5394.jpg?t=1633612717" alt="Mitai ir faktai apie mieguistumą ir kovą su juo" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/mitai-ir-faktai-apie-mieguistuma-ir-kova-su-juo-5394?category=38"><strong>Mitai ir faktai apie mieguistumą ir kovą su juo</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/mitai-ir-faktai-apie-mieguistuma-ir-kova-su-juo-5394?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/atvirai-apie-homeopatija-kuo-pasitikime-kai-susergame-5343?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2021/06/atvirai-apie-homeopatija-kuo-pasitikime-kai-susergame-5343.jpg?t=1624964344" alt="Atvirai apie homeopatiją: kuo pasitikime, kai susergame?" class="fl" />
+<div class="partner-ico-segment">
+<img class="partner-ico" src="https://sveikata.tv3.lt/app/assets/img/partner-ico.png" />
+</div>
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/atvirai-apie-homeopatija-kuo-pasitikime-kai-susergame-5343?category=38"><strong>Atvirai apie homeopatiją: kuo pasitikime, kai susergame?</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/atvirai-apie-homeopatija-kuo-pasitikime-kai-susergame-5343?category=38"></a>
+ </p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/rudens-orai-kaip-pakoreguoja-gyvenimo-buda-ir-sveikata-5384?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2021/09/rudens-orai-kaip-pakoreguoja-gyvenimo-buda-ir-sveikata-5384.jpg?t=1632294533" alt="Rudens orai: kaip pakoreguoja gyvenimo būdą ir sveikatą" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/rudens-orai-kaip-pakoreguoja-gyvenimo-buda-ir-sveikata-5384?category=38"><strong>Rudens orai: kaip pakoreguoja gyvenimo būdą ir sveikatą</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/rudens-orai-kaip-pakoreguoja-gyvenimo-buda-ir-sveikata-5384?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/kvapai-padedantys-iveikti-stresa-nurimti-5364?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2021/08/kvapai-padedantys-iveikti-stresa-nurimti-5364.jpg?t=1629290559" alt="Kvapai, padedantys įveikti stresą, nurimti" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/kvapai-padedantys-iveikti-stresa-nurimti-5364?category=38"><strong>Kvapai, padedantys įveikti stresą, nurimti</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/kvapai-padedantys-iveikti-stresa-nurimti-5364?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/7-neiprasti-medaus-panaudojimo-budai-5357?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2021/07/7-neiprasti-medaus-panaudojimo-budai-5357.jpg?t=1627289997" alt="7 neįprasti medaus panaudojimo būdai" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/7-neiprasti-medaus-panaudojimo-budai-5357?category=38"><strong>7 neįprasti medaus panaudojimo būdai</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/7-neiprasti-medaus-panaudojimo-budai-5357?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/neuromokslininko-isvada-nustebino-kartais-vyrai-priauga-svorio-tik-del-besilaukiancios-zmonos-5352?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2021/07/neuromokslininko-isvada-nustebino-kartais-vyrai-priauga-svorio-tik-del-besilaukiancios-zmonos-5352.jpg?t=1626856760" alt="Neuromokslininko išvada nustebino: kartais vyrai priauga svorio tik dėl besilaukiančios žmonos" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/neuromokslininko-isvada-nustebino-kartais-vyrai-priauga-svorio-tik-del-besilaukiancios-zmonos-5352?category=38"><strong>Neuromokslininko išvada nustebino: kartais vyrai priauga svorio tik dėl besilaukiančios žmonos</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/neuromokslininko-isvada-nustebino-kartais-vyrai-priauga-svorio-tik-del-besilaukiancios-zmonos-5352?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/kava-gerai-ar-blogai-5289?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2021/05/kava-gerai-ar-blogai-5289.jpg?t=1620289322" alt="Kava: gerai ar blogai?" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/kava-gerai-ar-blogai-5289?category=38"><strong>Kava: gerai ar blogai?</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/kava-gerai-ar-blogai-5289?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/9-neitiketini-faktai-apie-krauja-5283?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2021/04/9-neitiketini-faktai-apie-krauja-5283.jpg?t=1619621557" alt="9 neįtikėtini faktai apie kraują" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/9-neitiketini-faktai-apie-krauja-5283?category=38"><strong>9 neįtikėtini faktai apie kraują</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/9-neitiketini-faktai-apie-krauja-5283?category=38"></a>
+</p>
+<span class="comments"><a href="https://sveikata.tv3.lt/straipsnis/9-neitiketini-faktai-apie-krauja-5283#comments">1</a></span> </div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/velykiniu-kiausiniu-marginimui-3-netiketos-technikos-5241?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2021/04/velykiniu-kiausiniu-marginimui-3-netiketos-technikos-5241.jpg?t=1617348564" alt="Velykinių kiaušinių marginimui – 3 netikėtos technikos" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/velykiniu-kiausiniu-marginimui-3-netiketos-technikos-5241?category=38"><strong>Velykinių kiaušinių marginimui – 3 netikėtos technikos</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/velykiniu-kiausiniu-marginimui-3-netiketos-technikos-5241?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/3-neiprastos-marguciu-dazymo-technikos-kurios-paivairins-sventini-stala-5240?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2021/04/3-neiprastos-marguciu-dazymo-technikos-kurios-paivairins-sventini-stala-5240.jpg?t=1617348141" alt="3 neįprastos margučių dažymo technikos, kurios paįvairins šventinį stalą" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/3-neiprastos-marguciu-dazymo-technikos-kurios-paivairins-sventini-stala-5240?category=38"><strong>3 neįprastos margučių dažymo technikos, kurios paįvairins šventinį stalą</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/3-neiprastos-marguciu-dazymo-technikos-kurios-paivairins-sventini-stala-5240?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/paprasti-naujametiniai-pasizadejimai-kurie-pades-gyventi-sveikiau-5103?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2020/12/paprasti-naujametiniai-pasizadejimai-kurie-pades-gyventi-sveikiau-5103.jpg?t=1609335784" alt="Paprasti naujametiniai pasižadėjimai, kurie padės gyventi sveikiau" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/paprasti-naujametiniai-pasizadejimai-kurie-pades-gyventi-sveikiau-5103?category=38"><strong>Paprasti naujametiniai pasižadėjimai, kurie padės gyventi sveikiau</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/paprasti-naujametiniai-pasizadejimai-kurie-pades-gyventi-sveikiau-5103?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/7-neitiketinos-salto-oro-teikiamos-naudos-sveikatai-5101?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2020/12/7-neitiketinos-salto-oro-teikiamos-naudos-sveikatai-5101.jpg?t=1609215296" alt="7 neįtikėtinos šalto oro teikiamos naudos sveikatai" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/7-neitiketinos-salto-oro-teikiamos-naudos-sveikatai-5101?category=38"><strong>7 neįtikėtinos šalto oro teikiamos naudos sveikatai</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/7-neitiketinos-salto-oro-teikiamos-naudos-sveikatai-5101?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/5-rubu-medziagos-kurios-zalingos-sveikatai-4940?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2020/09/5-drabuziu-medziagos-kurios-zalingos-sveikatai-4940.jpg?t=1599659995" alt="5 drabužių medžiagos, kurios žalingos sveikatai" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/5-rubu-medziagos-kurios-zalingos-sveikatai-4940?category=38"><strong>5 drabužių medžiagos, kurios žalingos sveikatai</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/5-rubu-medziagos-kurios-zalingos-sveikatai-4940?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/27-metu-moteris-gyvenimo-bude-pakeitusi-tik-smulkmenas-per-metus-atsikrate-55-kilogramu-svorio-4859?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2020/07/55-kilogramu-atsikraciusi-mergina-pasidalino-paslaptimi-pakako-pakeisti-kelias-smulkmenas-4859.jpg?t=1594715373" alt="55 kilogramų atsikračiusi mergina pasidalino paslaptimi: pakako pakeisti kelias smulkmenas" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/27-metu-moteris-gyvenimo-bude-pakeitusi-tik-smulkmenas-per-metus-atsikrate-55-kilogramu-svorio-4859?category=38"><strong>55 kilogramų atsikračiusi mergina pasidalino paslaptimi: pakako pakeisti kelias smulkmenas</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/27-metu-moteris-gyvenimo-bude-pakeitusi-tik-smulkmenas-per-metus-atsikrate-55-kilogramu-svorio-4859?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/vaistininkai-primena-dabar-tinkamiausias-laikas-rinkti-liepziedzius-4844?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2020/07/vaistininkai-primena-dabar-tinkamiausias-laikas-rinkti-liepziedzius-4844.jpg?t=1594195245" alt="Vaistininkai primena: dabar tinkamiausias laikas rinkti liepžiedžius" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/vaistininkai-primena-dabar-tinkamiausias-laikas-rinkti-liepziedzius-4844?category=38"><strong>Vaistininkai primena: dabar tinkamiausias laikas rinkti liepžiedžius</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/vaistininkai-primena-dabar-tinkamiausias-laikas-rinkti-liepziedzius-4844?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/viena-labiausiai-sulieknejusiu-sporto-treneriu-erika-lugo-sako-apie-savo-kabancia-oda-tegul-zmones-ziuri-ir-didziuojasi-4799?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2020/06/ikvepianti-istorija-68-kg-atsikraciusi-moteris-si-tiksla-pasieke-sirgdama-veziu-4799.jpg?t=1591183063" alt="Įkvepianti istorija: 68 kg. atsikračiusi moteris šį tikslą pasiekė sirgdama vėžiu" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/viena-labiausiai-sulieknejusiu-sporto-treneriu-erika-lugo-sako-apie-savo-kabancia-oda-tegul-zmones-ziuri-ir-didziuojasi-4799?category=38"><strong>Įkvepianti istorija: 68 kg. atsikračiusi moteris šį tikslą pasiekė sirgdama vėžiu</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/viena-labiausiai-sulieknejusiu-sporto-treneriu-erika-lugo-sako-apie-savo-kabancia-oda-tegul-zmones-ziuri-ir-didziuojasi-4799?category=38"></a>
+</p>
+<span class="comments"><a href="https://sveikata.tv3.lt/straipsnis/viena-labiausiai-sulieknejusiu-sporto-treneriu-erika-lugo-sako-apie-savo-kabancia-oda-tegul-zmones-ziuri-ir-didziuojasi-4799#comments">1</a></span> </div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/du-trecdaliai-zmoniu-jaucia-sia-priklausomybe-testas-pades-pasitikrinti-4734?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2020/04/du-trecdaliai-zmoniu-jaucia-sia-priklausomybe-testas-pades-pasitikrinti-4734.jpg?t=1587368108" alt="Du trečdaliai žmonių jaučia šią priklausomybę: testas padės pasitikrinti" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/du-trecdaliai-zmoniu-jaucia-sia-priklausomybe-testas-pades-pasitikrinti-4734?category=38"><strong>Du trečdaliai žmonių jaučia šią priklausomybę: testas padės pasitikrinti</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/du-trecdaliai-zmoniu-jaucia-sia-priklausomybe-testas-pades-pasitikrinti-4734?category=38"></a>
+</p>
+</div>
+</div>
+<div class="holder580 clearfix bb-line">
+<a href="https://sveikata.tv3.lt/straipsnis/bunda-itin-vertingus-vaisius-vedantys-augalai-4723?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2020/04/bunda-itin-vertingus-vaisius-vedantys-augalai-4723.jpg?t=1586939479" alt="Bunda itin vertingus vaisius vedantys augalai" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/bunda-itin-vertingus-vaisius-vedantys-augalai-4723?category=38"><strong>Bunda itin vertingus vaisius vedantys augalai</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/bunda-itin-vertingus-vaisius-vedantys-augalai-4723?category=38"></a>
+</p>
+ </div>
+</div>
+<div class="holder580 clearfix">
+<a href="https://sveikata.tv3.lt/straipsnis/3-budai-suliekneti-be-dietu-ir-treniruociu-3579?category=38" style="float:left;display:block;position:relative;">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/275x145/2017/05/3-budai-suliekneti-be-dietu-ir-treniruociu-3579.jpg?t=1565762347" alt="3 būdai sulieknėti be dietų ir treniruočių" class="fl" />
+</a>
+<div class="holder295"><h5 class="mb10"><a href="https://sveikata.tv3.lt/straipsnis/3-budai-suliekneti-be-dietu-ir-treniruociu-3579?category=38"><strong>3 būdai sulieknėti be dietų ir treniruočių</strong></a></h5>
+<p>
+<a href="https://sveikata.tv3.lt/straipsnis/3-budai-suliekneti-be-dietu-ir-treniruociu-3579?category=38">Kaip norėtųsi, kad nereikalingi centimetrai ant talijos tirptų patys, kol mes ilsimės ar tiesiog kvėpuojame... Tai įmanoma!</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+            $(document).ready(function() {
+                $.ajax({
+                        type : "POST",
+                        url : WEBROOT+'/'+LANG+'/articles/checkArticleView/2704'
+                    });
+            });
+        </script>
+<script type="text/javascript">
+    function FmCopyLink() {
+        var body_element = document.getElementsByTagName('body')[0];
+        var selection, pagelink;
+        selection = window.getSelection();
+
+        var url = document.location.href.toString();
+        if(url.indexOf('utm_')!==-1){
+            url = url.replace(/[?&]utm_([^&])+/g,'');
+        }
+
+        if(url.indexOf('?')!==-1){
+            pagelink = "<br /><br /> Daugiau: <a href='"+url+"'>"+url+"&utm_source=copy&utm_medium=txt&utm_campaign=copy-txt</a>";
+        } else {
+            pagelink = "<br /><br /> Daugiau: <a href='"+url+"'>"+url+"?utm_source=copy&utm_medium=txt&utm_campaign=copy-txt</a>";
+        }
+
+        var newdiv = document.createElement('div');
+        newdiv.style.position='absolute';
+        newdiv.style.left='-99999px';
+        body_element.appendChild(newdiv);
+
+        if (typeof window.getSelection != "undefined") {
+            selection = window.getSelection();
+            for (var i = 0, len = selection.rangeCount; i < len; ++i) {
+                newdiv.appendChild(selection.getRangeAt(i).cloneContents());
+            }
+
+            if (selection.toString().length < 20) pagelink = '';
+
+        } else if (typeof document.selection != "undefined") {
+            if (document.selection.type == "Text") {
+                newdiv = document.selection.createRange().htmlText;
+            }
+        }
+
+        newdiv.innerHTML += pagelink;
+        selection.selectAllChildren(newdiv);
+
+        window.setTimeout(function() {
+            body_element.removeChild(newdiv);
+        },0);
+
+    }
+    document.oncopy = FmCopyLink;
+</script>
+</div>
+
+<div class="sticky-wrapper">
+<div id="middle_block">
+<div class="block r9">
+<span><strong>Panašūs straipsniai</strong></span>
+<div class="holder180 mr6 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/gaisrai-rysys-tarp-ugnies-ir-zmogaus-73?category=38">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2011/12/gaisrai-rysys-tarp-ugnies-ir-zmogaus-73.jpg?t=1332233707" alt="Gaisrai: ryšys tarp ugnies ir žmogaus" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/gaisrai-rysys-tarp-ugnies-ir-zmogaus-73?category=38">Gaisrai: ryšys tarp ugnies ir žmogaus</a></h5>
+</div>
+<div class="holder180 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/partizaniska-sodininkyste-74?category=38">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2011/12/partizaniska-sodininkyste-74.jpg?t=1332233707" alt="Partizaniška sodininkystė" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/partizaniska-sodininkyste-74?category=38">Partizaniška sodininkystė</a></h5>
+</div>
+<div class="holder180 mr6 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/klimato-kaita-menininku-akimis-75?category=38">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2011/12/klimato-kaita-menininku-akimis-75.jpg?t=1332233707" alt="Klimato kaita menininkų akimis" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/klimato-kaita-menininku-akimis-75?category=38">Klimato kaita menininkų akimis</a></h5>
+</div>
+</div>
+<div class="block r9" style="min-height:200px;">
+<script type="text/javascript">EadsRps.showRegion(453);</script>
+</div>
+<div class="block r9">
+<span><strong>Panašūs straipsniai</strong></span>
+<div class="holder180 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/planeta-isgelbes-kanapes-76?category=38">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2011/12/planeta-isgelbes-kanapes-76.jpg?t=1332233708" alt="Planetą išgelbės kanapės?" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/planeta-isgelbes-kanapes-76?category=38">Planetą išgelbės kanapės?</a></h5>
+</div>
+<div class="holder180 mr6 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/ekologiskos-mados-kriterijai-77?category=38">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2011/12/ekologiskos-mados-kriterijai-77.jpg?t=1332233708" alt="Ekologiškos mados kriterijai" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/ekologiskos-mados-kriterijai-77?category=38">Ekologiškos mados kriterijai</a></h5>
+</div>
+<div class="holder180 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/kaip-kovoti-su-energetiniais-vampyrais-106?category=38">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2011/12/kaip-kovoti-su-energetiniais-vampyrais-106.jpg?t=1332233520" alt="Kaip kovoti su energetiniais vampyrais?" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/kaip-kovoti-su-energetiniais-vampyrais-106?category=38">Kaip kovoti su energetiniais vampyrais?</a></h5>
+</div>
+</div>
+</div>
+</div>
+<div class="right">
+<div class="search">
+<form action="https://sveikata.tv3.lt/straipsniu-paieska" method="get">
+<input type="text" name="keywords" autocomplete="off" /><button type="submit"> </button>
+</form>
+</div>
+
+<div class="block advert clearfix">
+<h3 class="right-header"></h3>
+<div class="b-box">
+<script type="text/javascript">EadsRps.showRegion(215);</script>
+</div>
+</div>
+<div class="block">
+<div class="inner7">
+<h3 class="right-header">Populiariausi straipsniai</h3>
+<div id="coda-nav-1" class="holder-buttons coda-nav clearfix">
+<a href="#1" class="button blue">Savaitės</a>
+<a href="#2" class="button gray active">Mėnesio</a>
+<a href="#3" class="button blue">Visų laikų</a>
+</div>
+<div class="holder366 clearfix">
+<div class="coda-slider-wrapper">
+<div class="coda-slider preload" id="coda-slider-1">
+<div class="panel">
+<div class="panel-wrapper">
+<div class="holder180 mr6 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/patare-kaip-pasiruosti-vizitui-pas-onkologa-bei-kokia-pagalba-galime-sau-suteikti-patys-5422?category=92">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2021/11/patare-kaip-pasiruosti-vizitui-pas-onkologa-bei-kokia-pagalba-galime-sau-suteikti-patys-5422.jpg?t=1636989469" alt="Patarė, kaip pasiruošti vizitui pas onkologą bei kokią pagalbą galime sau suteikti patys" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/patare-kaip-pasiruosti-vizitui-pas-onkologa-bei-kokia-pagalba-galime-sau-suteikti-patys-5422?category=92">Patarė, kaip pasiruošti vizitui pas onkologą bei kokią pagalbą galime sau suteikti patys</a></h5>
+</div>
+<div class="holder180 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/sirdies-ir-kraujagysliu-ligu-5421?category=7">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2021/11/sirdies-ir-kraujagysliu-ligu-prevencija-tai-pades-uzbegti-siems-susirgimams-uz-akiu-5421.jpg?t=1636727570" alt="Širdies ir kraujagyslių ligų prevencija: tai padės užbėgti šiems susirgimams už akių" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/sirdies-ir-kraujagysliu-ligu-5421?category=7">Širdies ir kraujagyslių ligų prevencija: tai padės užbėgti šiems susirgimams už akių</a></h5>
+</div>
+<div class="holder180 mr6 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/patarimai-kurie-pades-namuose-issikepti-ypatingo-skonio-duonos-5427?category=16">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2021/11/patarimai-kaip-namuose-issikepti-ypatingo-skonio-duonos-5427.jpg?t=1637244422" alt="Patarimai, kaip namuose išsikepti ypatingo skonio duonos" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/patarimai-kurie-pades-namuose-issikepti-ypatingo-skonio-duonos-5427?category=16">Patarimai, kaip namuose išsikepti ypatingo skonio duonos</a></h5>
+</div>
+<div class="holder180 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/pasauline-diabeto-diena-dietologes-verdiktas-ar-tikrai-cukraus-pakaitalais-maista-ir-gerimus-saldinti-galime-be-sazines-grauzimo-5419?category=16">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2021/11/ar-tikrai-cukraus-pakaitalais-maista-ir-gerimus-saldinti-galime-be-sazines-grauzimo-5419.jpg?t=1636726600" alt="Ar tikrai cukraus pakaitalais maistą ir gėrimus saldinti galime be sąžinės graužimo?" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/pasauline-diabeto-diena-dietologes-verdiktas-ar-tikrai-cukraus-pakaitalais-maista-ir-gerimus-saldinti-galime-be-sazines-grauzimo-5419?category=16">Ar tikrai cukraus pakaitalais maistą ir gėrimus saldinti galime be sąžinės graužimo?</a></h5>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-wrapper">
+<div class="holder180 mr6 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/kankina-nuovargis-ir-slenka-plaukai-5412?category=7">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2021/11/kankina-nuovargis-ir-slenka-plaukai-organizmui-gali-trukti-sios-medziagos-5412.jpg?t=1636281538" alt="Kankina nuovargis ir slenka plaukai? Organizmui gali trūkti šios medžiagos" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/kankina-nuovargis-ir-slenka-plaukai-5412?category=7">Kankina nuovargis ir slenka plaukai? Organizmui gali trūkti šios medžiagos</a></h5>
+</div>
+<div class="holder180 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/kardiologas-apie-sirdies-ir-kraujagysliu-ligas-pavojaus-signalas-diskomfortas-krutineje-5415?category=92">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2021/11/kardiologas-apie-sirdies-ir-kraujagysliu-ligas-pavojaus-signalas-diskomfortas-krutineje-5415.jpg?t=1636357506" alt="Kardiologas apie širdies ir kraujagyslių ligas: pavojaus signalas – diskomfortas krūtinėje" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/kardiologas-apie-sirdies-ir-kraujagysliu-ligas-pavojaus-signalas-diskomfortas-krutineje-5415?category=92">Kardiologas apie širdies ir kraujagyslių ligas: pavojaus signalas – diskomfortas krūtinėje</a></h5>
+</div>
+<div class="holder180 mr6 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/kardiologas-patare-kaip-isvengti-sirdies-kraujagysliu-ligu-5407?category=92">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2021/11/kardiologas-patare-kaip-uzkirsti-kelia-sirdies-kraujagysliu-ligoms-5407.jpg?t=1636105262" alt="Kardiologas patarė, kaip užkirsti kelią širdies kraujagyslių ligoms" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/kardiologas-patare-kaip-isvengti-sirdies-kraujagysliu-ligu-5407?category=92">Kardiologas patarė, kaip užkirsti kelią širdies kraujagyslių ligoms</a></h5>
+</div>
+<div class="holder180 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/kaip-taisyklingai-islukstenti-granata-ir-su-kokiais-produktais-derinti-5414?category=16">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2021/11/kaip-taisyklingai-islukstenti-granata-ir-su-kokiais-produktais-derinti-5414.jpg?t=1636282551" alt="Kaip taisyklingai išlukštenti granatą ir su kokiais produktais derinti?" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/kaip-taisyklingai-islukstenti-granata-ir-su-kokiais-produktais-derinti-5414?category=16">Kaip taisyklingai išlukštenti granatą ir su kokiais produktais derinti?</a></h5>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-wrapper">
+<div class="holder180 mr6 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/tirpstancios-rankos-ar-reikia-susirupinti-10?category=7">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2012/02/tirpstancios-rankos-ar-reikia-susirupinti-10.jpg?t=1332233521" alt="Tirpstančios rankos: ar reikia susirūpinti?" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/tirpstancios-rankos-ar-reikia-susirupinti-10?category=7">Tirpstančios rankos: ar reikia susirūpinti?</a></h5>
+</div>
+<div class="holder180 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/tukstancio-problemu-sprendimas-linu-semenys-1392?category=12">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2012/07/tukstancio-problemu-sprendimas-linu-semenys-1392.jpg?t=1342189271" alt="Tūkstančio problemų sprendimas - linų sėmenys" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/tukstancio-problemu-sprendimas-linu-semenys-1392?category=12">Tūkstančio problemų sprendimas - linų sėmenys</a></h5>
+</div>
+<div class="holder180 mr6 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/slaku-ir-toksinu-valymas-is-organizmo-namu-salygomis-797?category=7">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2012/04/slaku-ir-toksinu-valymas-is-organizmo-namu-salygomis-797.jpg?t=1579088327" alt="Šlakų ir toksinų valymas iš organizmo namų sąlygomis" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/slaku-ir-toksinu-valymas-is-organizmo-namu-salygomis-797?category=7">Šlakų ir toksinų valymas iš organizmo namų sąlygomis</a></h5>
+</div>
+<div class="holder180 mb15">
+<a href="https://sveikata.tv3.lt/straipsnis/kaip-greitai-padaryti-spagata-1031?category=15">
+<img src="https://sveikata.tv3.lt/uploads/modules/articles/180x90/2012/05/kaip-greitai-padaryti-spagata-1031.jpg?t=1337087728" alt="Kaip greitai padaryti špagatą?" width="180" height="90" />
+</a>
+<h5><a href="https://sveikata.tv3.lt/straipsnis/kaip-greitai-padaryti-spagata-1031?category=15">Kaip greitai padaryti špagatą?</a></h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="block advert clearfix">
+<h3 class="right-header"></h3>
+<div class="b-box">
+<script type="text/javascript">EadsRps.showRegion(217);</script>
+</div>
+</div>
+<div class="block clearfix">
+<div class="inner">
+<h3 class="right-header">Ar žinote, kad...</h3>
+<p class="mb15 itemsText" id="itemsText">Lietuvoje iš tūkstančio gyventojų nuo gripo pasiskiepija vidutiniškai 30 asmenų, Latvijoje - 65, Estijoje – 52 asmenys. Tuo tarpu JAV tūkstančiui gyventojų tenka net 250 pasiskiepijusių, Europoje vidutiniškai – 177. </p>
+<a href="javascript:void(0);" onclick="items.getRandomItem(this)" class="link-more">Kitas faktas</a>
+</div>
+</div>
+<div class="block advert clearfix">
+<h3 class="right-header">Junkis prie mūsų Facebook'e!</h3>
+<div class="b-box">
+<fb:like-box href="https://www.facebook.com/Sveikata.lt" width="370" show_faces="true" stream="false" header="false"></fb:like-box>
+</div>
+</div>
+<div class="block advert clearfix">
+<h3 class="right-header"></h3>
+<div class="b-box">
+<script type="text/javascript">EadsRps.showRegion(219);</script>
+<script type="text/javascript">EadsRps.showRegion(220);</script>
+<script type="text/javascript">EadsRps.showRegion(221);</script>
+<script type="text/javascript">EadsRps.showRegion(222);</script>
+<script type="text/javascript">EadsRps.showRegion(223);</script>
+<script type="text/javascript">EadsRps.showRegion(224);</script>
+</div>
+</div>
+<div id="pollHolder">
+</div>
+<div class="block advert clearfix">
+<h3 class="right-header"></h3>
+<div class="b-box">
+<script type="text/javascript">EadsRps.showRegion(218);</script>
+</div>
+</div>
+<div class="block advert clearfix">
+<div class="b-box">
+<script type="text/javascript">EadsRps.showRegion(300);</script>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer">
+<div class="col">
+Sveikatos patarimų ir naujienų prenumerata:
+<div class="mt7">
+<input type="text" id="subscribe-email" />
+<button class="btn" onclick="$.post('https://sveikata.tv3.lt/lt/articles/subscribe', { email: $('#subscribe-email').val() }, function() { $('#subscribe-email').val(''); });">Užsakyti</button>
+</div>
+</div>
+<div class="col">
+<div class="fl border">
+<a href="/privatumo-politika" target="_blank">Privatumo politika</a>
+</div>
+<div class="fl border">
+Kontaktai: <a href="/cdn-cgi/l/email-protection#7f161119103f0c091a16141e0b1e51130b"><span class="__cf_email__" data-cfemail="1a73747c755a696c7f73717b6e7b34766e">[email&#160;protected]</span></a>
+</div>
+<div class="fl">
+Reklama portale: reklama(ETA)tipro.lt
+</div>
+<div class="clear"></div>
+<div class="copyright">
+Visos teisės saugomos. &copy; Sveikata.lt, 2021. Kopijuoti, dauginti bei platinti galima tik gavus raštišką sutikimą.
+</div>
+</div>
+<div class="fr mr20">
+<a href="https://sveikata.tv3.lt/">
+<img class="logo" src="https://sveikata.tv3.lt/app/assets/img/sveikata/logo-footer.png" alt="" />
+</a>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">EadsRps.showRegion(216);</script>
+<script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-25180591-5']);
+
+                        _gaq.push(['_setCustomVar', 1,'Category','Sveikas gyvenimas', 3]);
+                                _gaq.push(['_setCustomVar', 2,'Subcategory','Sveikas gyvenimas: Įdomybės', 3]);
+                        
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) { return; }
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=343872238960461";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+//            document.onload = $('.menu-main').css('overflow', 'visible');
+        </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"231cf5937b","applicationID":"20572312","transactionName":"MhBSZQoZC0FRBhBYVgtaZUMRVwxcVAAcH0kNBQ==","queueTime":0,"applicationTime":63,"atts":"HldRE0IDGE8=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+</html>
