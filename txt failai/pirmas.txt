@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>mano puslapis</title>
+  </head>
+  <body>
+    <h1>Labas pasauli</h1>
+    <p>paragrafas1</p>
+    <p>paragrafas2</p>
+    <p>paragrafas3</p>
+
+    <h2>antras</h2>
+    <p>antro tekstas1</p>
+    <p>Issirinkite
+      <b>
+      <i>
+        <ins>
+        viena
+      </ins>
+      </i>
+    </b>, iš <strong>dvieju</strong>
+      <i>paragrafu</i> <em>esantį</em> po <mark>antraja</mark>
+       <small>antrašte</small> <del>(h2)</del> ir <ins>panaudokite</ins>
+      skirtingiems  <sup>zodziams</sup> <sub>visas</sub>
+    </br>stilizavimo žymas.</p>
+  </body>
+  </html>

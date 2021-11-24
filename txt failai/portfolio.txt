@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>portfolio</title>
+</head>
+<body>
+<h1>Labas pasauli</h1>
+<a href="../index1.html">Pradzia</a>
+</body>
+</html>

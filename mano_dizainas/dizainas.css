@@ -10,8 +10,41 @@ li:nth-child(2)
     width: 100px;
     height: 100px;
 }
-li:nth-child(2) {color: red}
+li:nth-child(2) {
+    color: red;
+}
 
 li:nth-child(2) {
     font-weight: bold;
+}
+html,body {
+    height: 70%;
+    width: 30%;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+header {
+    background-color: lightpink;
+}
+aside {
+    background-color: cadetblue;
+    width: 200px;
+    float:left;
+}
+
+main {
+    background-color: yellow;
+    width: 84%;
+    float: left;
+}
+footer {
+    background-color: #232323;
+    color: darkgray;
+    clear: both;
+}
+.turinys {
+    width:100%;
 }
