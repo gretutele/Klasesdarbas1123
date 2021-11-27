@@ -9,34 +9,37 @@ div.stulpelis {
 .stulpelis {
     float: left;
 }
-
 html, body {
     height: 100%;
 }
-.grid {
+.gridas {
     grid-area: s;
     height: 100%;
     display: grid;
     grid-template-areas:
-        's h h'
-        's m r'
-        's f f';
+        'sonas headeris headeris'
+        'sonas main reklama'
+        'sonas footeris footeris';
     grid-template-rows: 50px auto 100px;
     grid-template-columns: 1fr 3fr 1fr;
     grid-gap: 5px;
 }
 .main {
-    grid-area: m;
+    grid-area: main;
 }
-.footer {
-    grid-area: f;
+.footeris {
+    grid-area: footeris;
 }
-.header {
-    grid-area: h;
+.headeris {
+    grid-area: headeris;
 }
-.aside {
-    grid-area: r;
+.reklama {
+    grid-area: reklama;
 }
+.sonas {
+    grid-area: sonas;
+}
+
 
 /* Extra maži įrenginiai (telefonai, 600px ir žemiau) */
 @media only screen and (max-width: 600px) {
@@ -48,9 +51,9 @@ html, body {
         width: 100%;
         height: 100%;
         grid-template-areas:
-            'h'
-            'm'
-            'f';
+            'headeris'
+            'main'
+            'footeris';
         grid-template-rows: 25px auto 50px;
         grid-template-columns: 5fr;
         grid-gap: 5px;
@@ -72,11 +75,11 @@ html, body {
     .gridas {
         display: grid;
         grid-template-areas:
-            'h'
-            's'
-            'm'
-            'r'
-            'f';
+            'headeris'
+            'sonas'
+            'main'
+            'reklama'
+            'footeris';
         grid-template-rows: 25px 25px auto 50px 50px;
         grid-template-columns: 5fr;
         grid-gap: 5px;
@@ -92,14 +95,14 @@ html, body {
         height: 100%;
         display: grid;
         grid-template-areas:
-            's h'
-            's m'
-            's f';
+            'sonas headeris'
+            'sonas main'
+            'sonas footeris';
         grid-template-rows: 50px auto 100px;
         grid-template-columns: 1fr 4fr;
         grid-gap: 5px;
     }
-    aside, .gridas>div:nth-child(4) {
+    .reklama {
         display: none;
     }
 }
@@ -113,17 +116,17 @@ html, body {
         display: grid;
         height: 100%;
         grid-template-areas:
-        's h'
-        's m'
-        's m'
-        's r';
-        's f'
+        'sonas headeris headeris'
+        'sonas main reklama'
+        'sonas main reklama'
+        'sonas main reklama'
+        'sonas footeris footeris';
         grid-template-rows: 50px auto 50px 50px 100px;
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 1fr 3fr 1fr;
         grid-gap: 5px;
     }
-    aside, .gridas>div:nth-child(4) {
-        display: inline ;
+    .reklama {
+        display: inline;
     }
 }
 
@@ -133,15 +136,17 @@ html, body {
         background-color: magenta;
     }
     .gridas {
-        display: grid;
-        width: 100%;
         height: 100%;
+        display: grid;
         grid-template-areas:
-        's h h'
-        's m r'
-        's f f';
+        'sonas headeris headeris'
+        'sonas main reklama'
+        'sonas footeris footeris';
         grid-template-rows: 50px auto 100px;
         grid-template-columns: 1fr 3fr 1fr;
+    }
+    .reklama {
+        display: inline;
         grid-gap: 5px;
     }
     body > * {
