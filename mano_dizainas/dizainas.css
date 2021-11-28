@@ -27,6 +27,9 @@ html, body {
 .main {
     grid-area: main;
 }
+.kita {
+    grid-area: kita;
+}
 .footeris {
     grid-area: footeris;
 }
@@ -44,52 +47,65 @@ html, body {
 /* Extra maži įrenginiai (telefonai, 600px ir žemiau) */
 @media only screen and (max-width: 600px) {
     .cele {
-        background-color: #6b2e94;
+        background-color: #d7aff3;
     }
     .gridas {
         display: grid;
         width: 100%;
         height: 100%;
         grid-template-areas:
-            'headeris'
-            'main'
-            'footeris';
-        grid-template-rows: 25px auto 50px;
-        grid-template-columns: 5fr;
+            'headeris headeris'
+            'sonas kita'
+            'footeris footeris';
+        grid-template-rows: 50px auto 50px;
+        grid-template-columns: 3fr 2fr;
         grid-gap: 5px;
     }
-
-    aside, .gridas>div:nth-child(1) {
+    .main {
         display: none;
     }
-    aside, .gridas>div:nth-child(4) {
+    .reklama {
         display:none;
+    }
+    .headeris {
+        text-align: center;
+    }
+    .footeris {
+        text-align: center;
     }
 }
 
 /* Maži įrenginiai (statmenos planšetės, ar gulsti telefonai 600px ir aukščiau) */
 @media only screen and (min-width: 600px) {
     .cele {
-        background-color: green;
+        background-color: #a5f6b8;
     }
     .gridas {
         display: grid;
         grid-template-areas:
-            'headeris'
-            'sonas'
-            'main'
-            'reklama'
-            'footeris';
-        grid-template-rows: 25px 25px auto 50px 50px;
-        grid-template-columns: 5fr;
+            'headeris headeris'
+            'sonas reklama'
+            'kita reklama'
+            'footeris footeris';
+        grid-template-rows: 50px auto auto 50px;
+        grid-template-columns: 3fr 2fr;
         grid-gap: 5px;
+    }
+    .footeris {
+        text-align: center;
+    }
+    .headeris {
+        text-align: center;
+    }
+    .main {
+        display: none;
     }
 }
 
 /* Vidutiniai įrenginiai (gulsčios planšetės ar maži laptopai, 768px ir aukščiau) */
 @media only screen and (min-width: 768px) {
     .cele {
-        background-color: blue;
+        background-color: #b7caff;
     }
     .gridas {
         height: 100%;
@@ -97,35 +113,54 @@ html, body {
         grid-template-areas:
             'sonas headeris'
             'sonas main'
-            'sonas footeris';
-        grid-template-rows: 50px auto 100px;
+            'kita main'
+            'footeris footeris';
+        grid-template-rows: 50px auto 900px 50px;
         grid-template-columns: 1fr 4fr;
         grid-gap: 5px;
     }
     .reklama {
         display: none;
     }
+    .footeris {
+        text-align: center;
+    }
+    .headeris {
+        text-align: center;
+    }
+    .main {
+        display: inline;
+    }
 }
 
 /* Dideli įrenginiai (laptopai, staliniai PC, 992px ir aukščiau) */
 @media only screen and (min-width: 992px) {
     .cele {
-        background-color: yellow;
+        background-color: #ffd7a2;
     }
     .gridas {
         display: grid;
         height: 100%;
         grid-template-areas:
-        'sonas headeris headeris'
+        'headeris headeris headeris'
         'sonas main reklama'
         'sonas main reklama'
-        'sonas main reklama'
-        'sonas footeris footeris';
-        grid-template-rows: 50px auto 50px 50px 100px;
+        'kita main reklama'
+        'footeris footeris footeris';
+        grid-template-rows: 50px auto 50px 700px 50px;
         grid-template-columns: 1fr 3fr 1fr;
         grid-gap: 5px;
     }
     .reklama {
+        display: inline;
+    }
+    .headeris {
+        text-align: center;
+    }
+    .footeris {
+        text-align: center;
+    }
+    .main {
         display: inline;
     }
 }
@@ -133,16 +168,17 @@ html, body {
 /* Extra dideli įrenginiai (dideli laptopai ir stalinai PC, 1200px ir aukščiau) */
 @media only screen and (min-width: 1200px) {
     .cele {
-        background-color: magenta;
+        background-color: #dcdcdc;
     }
     .gridas {
         height: 100%;
         display: grid;
         grid-template-areas:
-        'sonas headeris headeris'
+        'headeris headeris headeris'
         'sonas main reklama'
-        'sonas footeris footeris';
-        grid-template-rows: 50px auto 100px;
+        'kita main reklama'
+        'footeris footeris footeris';
+        grid-template-rows: 50px auto 700px 50px;
         grid-template-columns: 1fr 3fr 1fr;
     }
     .reklama {
@@ -151,5 +187,14 @@ html, body {
     }
     body > * {
         border: 5px white;
+    }
+    .headeris {
+        text-align: center;
+    }
+    .footeris {
+        text-align: center;
+    }
+    .main {
+        display: inline;
     }
 }
