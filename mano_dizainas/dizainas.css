@@ -152,7 +152,7 @@ html, body {
         grid-gap: 5px;
     }
     .reklama {
-        display: inline;
+        display: block;
     }
     .headeris {
         text-align: center;
@@ -182,8 +182,7 @@ html, body {
         grid-template-columns: 1fr 3fr 1fr;
     }
     .reklama {
-        display: inline;
-        grid-gap: 5px;
+        display: block;
     }
     body > * {
         border: 5px white;
