@@ -64,14 +64,14 @@ html, body {
     .main {
         display: none;
     }
-    .reklama {
-        display:none;
-    }
     .headeris {
         text-align: center;
     }
     .footeris {
         text-align: center;
+    }
+    .reklama {
+        display:none;
     }
 }
 
@@ -96,6 +96,9 @@ html, body {
     }
     .headeris {
         text-align: center;
+    }
+    .reklama {
+        display: block;
     }
     .main {
         display: none;
