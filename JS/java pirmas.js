@@ -20,18 +20,32 @@ let ats = a1 + a2 + a3;
 console.log(ats);
 -->
 
+<!--
 let n1 = 3;
 let n2 = 4;
 
 let s1 = (n1 - 2) * 180;
 let s2 = (n2 - 2) * 180;
 
-document.getElementById( elementid: 'ats')
+document.getElementById('ats')
 .innerHTML = 'Pirmo daugiakampio [' + n1 + '] kampu suma yra ' + s1 + ' ';
-document.getElementById( elementid: 'ats')
+document.getElementById('ats')
 .innerHTML += 'Antrojo daugiakampio [' + n2 + '] kampu suma yra ' + s2 + ' ';
-document.getElementById( elementid: 'ats')
+document.getElementById('ats')
 .innerHTML += 'Abieju kampu suma yra ' + (s1 + s2);
 
-let elementasAts = document.getElementById(elementid: 'ats'
+let elementasAts = document.getElementById('ats'
 );
+-->
+
+let inta=-5; let intb=0; let intc=-4; let intd=4;
+let answer;
+
+if ((intd >= inta) && (intc <= intb)) {
+    let cut_x = Math.max(inta, intc);
+    let cut_y = Math.min(intd, intb);
+    answer = "Rezis: " + [cut_x, cut_y];
+} else {
+    answer = "Null";
+}
+console.log(answer);
