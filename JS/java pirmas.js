@@ -36,7 +36,7 @@ document.getElementById('ats')
 
 let elementasAts = document.getElementById('ats'
 );
--->
+
 
 let inta=-5; let intb=0; let intc=-4; let intd=4;
 let answer;
@@ -49,3 +49,4 @@ if ((intd >= inta) && (intc <= intb)) {
     answer = "Null";
 }
 console.log(answer);
+-->
