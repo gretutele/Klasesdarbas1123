@@ -1,4 +1,4 @@
-<!--
+
 let a = 1;
 let tekstas = 'Kintamojo a reiksme: ';
 console.log(tekstas + a);
@@ -18,9 +18,9 @@ let a2 = menuo % 10;
 let a3 = diena % 10;
 let ats = a1 + a2 + a3;
 console.log(ats);
--->
 
-<!--
+
+
 let n1 = 3;
 let n2 = 4;
 
@@ -49,4 +49,4 @@ if ((intd >= inta) && (intc <= intb)) {
     answer = "Null";
 }
 console.log(answer);
--->
+

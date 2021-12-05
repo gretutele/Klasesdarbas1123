@@ -14,7 +14,7 @@ console.log(ats2);
 
 let vardas = "Sima";
 let pavarde = "Rimaite";
-let kursas = "4" + "kursas,";
+let kursas = 4 + "kursas,";
 let pavadinimas = "mokosi KTU,";
 let pazymiai = "jos pazymiai [8, 3, 9]";
 
@@ -88,6 +88,13 @@ document.getElementById("daug").innerHTML = daug;
 
 // ar kursas numeral tipo
 
+kursas = 4;
+document.getElementById("NaN").innerHTML = typeof kursas;
 
+//  ar studente mokosi ketvirtame kurse ir ar ši reikšmė yra kaip numeral
+
+if("Sima" === 4 && 4 === NaN) {
+    document.getElementById("ketvirtas_kursas").innerHTML = typeof NaN;
+}
 
 
