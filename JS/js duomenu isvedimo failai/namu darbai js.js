@@ -81,6 +81,7 @@ console.log(x, y, z);
 let sum = 8 + 3 + 9;
 document.getElementById("sum").innerHTML = sum;
 
+
 // daugyba
 
 let daug = 8 * 3;
@@ -94,7 +95,33 @@ document.getElementById("NaN").innerHTML = typeof kursas;
 //  ar studente mokosi ketvirtame kurse ir ar ši reikšmė yra kaip numeral
 
 if("Sima" === 4 && 4 === NaN) {
-    document.getElementById("ketvirtas_kursas").innerHTML = typeof NaN;
+document.getElementById("ketvirtas_kursas").innerHTML = typeof NaN;
 }
 
+//paskaitos uzduotis
+
+function sudetis(a, b){
+    return a + b;
+}
+function atimtis(a, b){
+    return a - b;
+}
+function daugyba(a, b){
+    return a * b;
+}
+function dalyba(a, b){
+    return a / b;
+}
+
+function run(){
+    let rez = document.getElementById('rezultatai');
+    for (let x = 1; x <= 5; x++) {
+        for(let b = 1; b <= 20; b += 2){
+            rez.innerHTML += 'Skaiciu [' + x + ', ' + b + '] suma: ' + sudetis(x, b) + '<br>';
+            rez.innerHTML += 'Skaiciu [' + x + ', ' + b + '] atimtis: ' + atimtis(x, b) + '<br>';
+            rez.innerHTML += 'Skaiciu [' + x + ', ' + b + '] daugyba: ' + daugyba(x, b) + '<br>';
+            rez.innerHTML += 'Skaiciu [' + x + ', ' + b + '] dalyba: ' + dalyba(x, b) + '<hr>';
+        }
+    }
+}
 
