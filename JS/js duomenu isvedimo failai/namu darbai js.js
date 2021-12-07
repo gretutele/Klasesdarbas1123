@@ -112,15 +112,16 @@ function daugyba(a, b){
 function dalyba(a, b){
     return a / b;
 }
-
+let m = 1;
+let n= 2;
 function run(){
     let rez = document.getElementById('rezultatai');
-    for (let x = 1; x <= 5; x++) {
-        for(let b = 1; b <= 20; b += 2){
-            rez.innerHTML += 'Skaiciu [' + x + ', ' + b + '] suma: ' + sudetis(x, b) + '<br>';
-            rez.innerHTML += 'Skaiciu [' + x + ', ' + b + '] atimtis: ' + atimtis(x, b) + '<br>';
-            rez.innerHTML += 'Skaiciu [' + x + ', ' + b + '] daugyba: ' + daugyba(x, b) + '<br>';
-            rez.innerHTML += 'Skaiciu [' + x + ', ' + b + '] dalyba: ' + dalyba(x, b) + '<hr>';
+    for (let m = 1; m <= 5; m++) {
+        for(let n = 1; n <= 20; n += 2){
+            rezult.innerHTML += 'Skaiciu [' + m + ', ' + n + '] suma: ' + sudetis(m, n) + '<br>';
+            rezult.innerHTML += 'Skaiciu [' + m + ', ' + n + '] atimtis: ' + atimtis(m, n) + '<br>';
+            rezult.innerHTML += 'Skaiciu [' + m + ', ' + n + '] daugyba: ' + daugyba(m, n) + '<br>';
+            rezult.innerHTML += 'Skaiciu [' + m + ', ' + n + '] dalyba: ' + dalyba(m, n) + '<br>';
         }
     }
 }

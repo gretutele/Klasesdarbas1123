@@ -84,11 +84,11 @@ html, body {
         display: grid;
         grid-template-areas:
             'headeris headeris'
-            'sonas reklama'
-            'kita reklama'
+            'sonas main'
+            'kita main'
             'footeris footeris';
         grid-template-rows: 50px auto auto 50px;
-        grid-template-columns: 3fr 2fr;
+        grid-template-columns: 2fr 3fr;
         grid-gap: 5px;
     }
     .footeris {
@@ -97,11 +97,8 @@ html, body {
     .headeris {
         text-align: center;
     }
-    .reklama {
-        display: block;
-    }
     .main {
-        display: none;
+        display: block;
     }
 }
 
@@ -121,9 +118,6 @@ html, body {
         grid-template-rows: 50px auto 900px 50px;
         grid-template-columns: 1fr 4fr;
         grid-gap: 5px;
-    }
-    .reklama {
-        display: none;
     }
     .footeris {
         text-align: center;
@@ -146,16 +140,13 @@ html, body {
         height: 100%;
         grid-template-areas:
         'headeris headeris headeris'
-        'sonas main reklama'
-        'sonas main reklama'
-        'kita main reklama'
+        'sonas main main'
+        'sonas main main'
+        'kita main main'
         'footeris footeris footeris';
         grid-template-rows: 50px auto 50px 700px 50px;
         grid-template-columns: 1fr 3fr 1fr;
         grid-gap: 5px;
-    }
-    .reklama {
-        display: block;
     }
     .headeris {
         text-align: center;
@@ -178,14 +169,11 @@ html, body {
         display: grid;
         grid-template-areas:
         'headeris headeris headeris'
-        'sonas main reklama'
-        'kita main reklama'
+        'sonas main main'
+        'kita main main'
         'footeris footeris footeris';
         grid-template-rows: 50px auto 700px 50px;
         grid-template-columns: 1fr 3fr 1fr;
-    }
-    .reklama {
-        display: block;
     }
     body > * {
         border: 5px white;
