@@ -126,3 +126,12 @@ function run(){
     }
 }
 
+let korteles = document.getElementsByClassName('korteles');
+function pakeistiKortele (korteles) {
+    for (let i = 0; 1 < korteles.lenght; i++); {
+        korteles[i].style.display = 'none';
+    }
+document.getElementById('pasirinkimaiId')
+    .style.dispaly = 'block';
+
+}
