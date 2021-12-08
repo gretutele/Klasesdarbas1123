@@ -73,7 +73,7 @@ for (let i = 0; i < masyvas.length; i++) {
 // pakelti per viena  //
 
 let x = 8; y = 3; z = 9;
-x++ , y++, z++;
+x++ , y++ , z++;
 console.log(x, y, z);
 
 // suma
@@ -127,11 +127,17 @@ function run(){
 }
 
 let korteles = document.getElementsByClassName('korteles');
-function pakeistiKortele (korteles) {
-    for (let i = 0; 1 < korteles.lenght; i++); {
-        korteles[i].style.display = 'none';
-    }
-document.getElementById('pasirinkimaiId')
-    .style.dispaly = 'block';
 
+function pakeistiKortele (pasirinkimaiId) {
+    for (let i = 0; 1 < korteles.length; i++); {
+        korteles[i].style.display ='none';
+    }
+    document.getElementById('pasirinkimaiId')
+    .style.dispaly = 'block';
 }
+
+
+
+
+
+

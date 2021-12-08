@@ -205,22 +205,33 @@ html, body {
 
 .korteles {
     display: none;
+    border: 1px solid dimgrey;
 }
-.aprasymas {
+
+#aprasymas {
     display: block;
 }
 .pasirinkimai {
-    text-align: center;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    border-bottom-right-radius: 25px;
-    border-collapse: collapse;
-    width: 100%;
+    display: flex;
+    border: 1px solid dimgrey;
 }
+
 .korteles {
     display: flex;
-    background-color: rgba(166, 45, 45, 0.3);
-    padding: 10px;
-    border-radius: 20px;
+    text-align: center;
+    width: 95%;
+    hight: 60px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-bottom-right-radius: 30px;
+    border-collapse: collapse;
+}
+
+.pasirinkimai a {
+    text-align: center;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-bottom-right-radius: 30px;
+    border-collapse: collapse;
 }
