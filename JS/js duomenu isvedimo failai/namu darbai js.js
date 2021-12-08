@@ -136,8 +136,15 @@ function pakeistiKortele (pasirinkimaiId) {
     .style.dispaly = 'block';
 }
 
+// reikia paspaudus gauti kad zodis pasikeitu i atributa
+// kaip a tarkim ar string ar kazkas tokio Jquery tema
 
-
-
+$(document).ready(function(g) {
+  //  console.log ('veikiu');
+    $('*').click(function () {
+    //    console.log ('veikiu');
+        $('#kasas').text('tagName');
+    });
+});
 
 
