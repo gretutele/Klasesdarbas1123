@@ -203,9 +203,8 @@ html, body {
 
 
 
-.korteles {
+.kortele {
     display: none;
-    border: 1px solid dimgrey;
 }
 
 #aprasymas {
@@ -213,14 +212,13 @@ html, body {
 }
 .pasirinkimai {
     display: flex;
-    border: 1px solid dimgrey;
 }
 
 .korteles {
     display: flex;
     text-align: center;
     width: 95%;
-    hight: 60px;
+    height: 60px;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 20px;
     border-bottom-right-radius: 30px;

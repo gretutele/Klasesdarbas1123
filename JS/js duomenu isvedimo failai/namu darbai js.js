@@ -109,42 +109,57 @@ function atimtis(a, b){
 function daugyba(a, b){
     return a * b;
 }
-function dalyba(a, b){
+function dalyba(a, b) {
     return a / b;
 }
 let m = 1;
 let n= 2;
 function run(){
-    let rez = document.getElementById('rezultatai');
-    for (let m = 1; m <= 5; m++) {
-        for(let n = 1; n <= 20; n += 2){
-            rezult.innerHTML += 'Skaiciu [' + m + ', ' + n + '] suma: ' + sudetis(m, n) + '<br>';
-            rezult.innerHTML += 'Skaiciu [' + m + ', ' + n + '] atimtis: ' + atimtis(m, n) + '<br>';
-            rezult.innerHTML += 'Skaiciu [' + m + ', ' + n + '] daugyba: ' + daugyba(m, n) + '<br>';
-            rezult.innerHTML += 'Skaiciu [' + m + ', ' + n + '] dalyba: ' + dalyba(m, n) + '<br>';
-        }
-    }
-}
+     let rez = document.getElementById('rezultatai');
+     for (let m = 1; m <= 5; m++) {
+         for(let n = 1; n <= 20; n += 2){
+             rezult.innerHTML += 'Skaiciu [' + m + ', ' + n + '] suma: ' + sudetis(m, n) + '<br>';
+             rezult.innerHTML += 'Skaiciu [' + m + ', ' + n + '] atimtis: ' + atimtis(m, n) + '<br>';
+             rezult.innerHTML += 'Skaiciu [' + m + ', ' + n + '] daugyba: ' + daugyba(m, n) + '<br>';
+             rezult.innerHTML += 'Skaiciu [' + m + ', ' + n + '] dalyba: ' + dalyba(m, n) + '<br>';
+          }
+      }
+};
 
-let korteles = document.getElementsByClassName('korteles');
+let kortele = document.getElementsByClassName('kortele');
 
-function pakeistiKortele (pasirinkimaiId) {
-    for (let i = 0; 1 < korteles.length; i++); {
-        korteles[i].style.display ='none';
+function perjungtTaba(pasirinkimaiId) {
+    console.log(pasirinkimaiId);
+    console.log(kortele);
+    for (let i = 0; i < kortele.length; i++) {
+       $(kortele[i]).css("display", "none");
     }
-    document.getElementById('pasirinkimaiId')
-    .style.dispaly = 'block';
+    $(document.getElementById(pasirinkimaiId))
+        .css("display", "block");
 }
 
 // reikia paspaudus gauti kad zodis pasikeitu i atributa
 // kaip a tarkim ar string ar kazkas tokio Jquery tema
 
-$(document).ready(function(g) {
-  //  console.log ('veikiu');
-    $('*').click(function () {
-    //    console.log ('veikiu');
-        $('#kasas').text('tagName');
-    });
+//neanonimine
+function tagVardas(elementas) {
+   console.log ('veikiu', elementas);
+   //$('#kasas').text(elementas.target.tagName);
+}
+// anonimine
+$(document).ready(function() {
+ console.log ('veikiu');
+ $('*').click(tagVardas);
 });
 
+//uzduotis toliau pilna
+
+$('*').click(function (e) {
+        let pavadinimas = e.target.tagName;
+        let tags = $(pavadinimas);
+        let tagCount = tags.length;
+        $('#kasas').text('Paspaudete ant ' + pavadinimas + ' tago. Tokiu elementu yra: ' + tagCount)
+        tags.css('background-color', 'yellow');
+    }
+);
 
