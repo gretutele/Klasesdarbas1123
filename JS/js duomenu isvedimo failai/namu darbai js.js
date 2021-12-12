@@ -94,9 +94,24 @@ document.getElementById("NaN").innerHTML = typeof kursas;
 
 //  ar studente mokosi ketvirtame kurse ir ar ši reikšmė yra kaip numeral
 
-if("Sima" === 4 && 4 === NaN) {
-document.getElementById("ketvirtas_kursas").innerHTML = typeof NaN;
-}
+//let tipas = typeof kursas;
+//if(kursas === 4) {
+   // document.getElementById("13").innerHTML = "Studentas mokosi " + kursas + " kurse ir kurso tipas yra " + tipas;
+//} else {
+  //  document.getElementById("13").innerHTML = "Studentas nesimoko 4 kurse";
+//}
+
+//14uzd neveikia
+
+//let vardas2 = masyvas[0];
+//let pavarde2 = masyvas[1];
+//if(kursas === 4) {
+//    document.getElementById("14").innerHTML = "Studentas " + vardas2 + " " + pavarde2 + " yra abiturientas";
+//} else {
+   // document.getElementById("14").innerHTML = "Studentui " + vardas2 + " " + pavarde2 + " dar toli iki mokslų baigimo";
+//}
+
+
 
 //paskaitos uzduotis
 
@@ -152,7 +167,7 @@ $(document).ready(function() {
  $('*').click(tagVardas);
 });
 
-//uzduotis toliau pilna
+//uzduotis toliau pilna js
 
 $('*').click(function (e) {
         let pavadinimas = e.target.tagName;
@@ -162,4 +177,5 @@ $('*').click(function (e) {
         tags.css('background-color', 'yellow');
     }
 );
+
 
