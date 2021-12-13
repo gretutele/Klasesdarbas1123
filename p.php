@@ -1,3 +1,13 @@
+<html>
+<head>
+    <body>
+
+</body>
+</head>
+
+</html>
+
+
 <?php
 
 $ceu = [
@@ -47,8 +57,11 @@ foreach($ceu as $x => $x_value) {
 //php namu darbai toliau
 //kas penktas
 
-for ($x = 0; $x <= 25; $x+=5) {
-    echo "The number is: $x <br>";
+for ($i = 0, $iMax = count($ceu); $i <$iMax; $i+=5) {
+    $key = array_keys($ceu)[$i];
+    $value = $ceu[$key];
+    echo $key . ' = ' . $value . "<br>";
+
 }
 
 //skirianti eilute
@@ -60,6 +73,18 @@ foreach ($ceu as $key => $value) {
     echo str_replace("a", "A", "$key");
     echo "<br/>";
 }
+
+// destytojo variantas reikia perziuret, cia blogas
+
+foreach ($ceu as $key => $value) {
+    if (strpos($key, 'A') > 0 || strpos($value, 'A') > 0) {
+        echo $key . ' = ' . $value . "<br>";
+    } else {
+        echo strpos($key, 'A') . "<br>";
+    }
+}
+
+
 //temperatura
 
 $temp = [78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 75, 76, 73, 68, 62, 73, 72, 65, 74, 62, 62, 65, 64, 68, 73,
@@ -94,14 +119,14 @@ for ($x= count($temp) - 5; $x < count($temp);$x++) {
 
 //echo strlen("Hello world!");
 
-$arr = ["abcd", "abc", "de", "hjjj", "g", "wer"];
+$arr = ["abc", "de", "abcd", "hjjj", "g", "wer"];
 
 echo "Trumpiausias masyvo elementas: ";
-echo (min($arr));
+echo strlen(min($arr));
     echo "<br/>";
 
 echo "Ilgiausi masyvo elementai: ";
-echo (max($arr));
+echo strlen(max($arr));
     echo "<br/>";
 
 //pirmas nerodo ka reik, antras skaiciais zemiau:

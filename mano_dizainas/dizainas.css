@@ -227,7 +227,7 @@ html, body {
     text-align: center;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 10px 0px 3px darkgrey;
+    box-shadow: 10px 0 3px darkgrey;
     padding: 10px;
     border-top-left-radius: 15px;
     border-collapse: separate;
