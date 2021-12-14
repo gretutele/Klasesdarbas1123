@@ -1,7 +1,7 @@
 <?php
 include 'konvert.php';
 
-function konvertuoti(float $kas, string $kaip): float {
+function konvertavimai(float $kas, string $kaip): float {
     switch ($kaip) {
         case 'mylios':
             $ats = KM2MILES($kas);
