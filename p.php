@@ -151,34 +151,61 @@ print_r($D) ;
 
 //funkcijos
 
-function KmMile($kint, $koks) {
-    if($koks === 'kilometrai') {
+/*function KmMile($kint, $kas) {
+    if($kas === 'kilometrai') {
         return $kint * 0.621371;
     }
-    if($koks === 'mylios') {
+    if($kas === 'mylios') {
         return $kint * 1.60934;
     }
 }
-function KgPound($kint, $koks) {
-    if($koks === 'kilogramai') {
+function KgPound($kint, $kas) {
+    if($kas === 'kilogramai') {
         return $kint * 2.20462;
     }
-    if($koks === 'poundai') {
+    if($kas === 'poundai') {
         return $kint * 0.453592;
     }
 }
-function CelsFaren($kint, $koks) {
-    if($koks === 'celcijus') {
+function CelsFaren($kint, $kas) {
+    if($kas === 'celcijus') {
         return $kint * 9/5 + 32;
     }
-    if($koks === 'farenheitai') {
+    if($kas === 'farenheitai') {
         return ($kint - 32)* 5/9;
     }
 }
 
-echo KmMile(20, 'kilometrai');
+//echo KmMile(15, 'kilometrai');
+//echo '<br>';
+//echo KgPound(10, 'kilogramai');
+//echo '<br>';
+//echo CelsFaren(10, 'celcijus');
+//echo '<br>';
+*/
+
+
+//function konvertuoti(int|(float $ka, string $kaip): float) {
+   // switch ($kaip) {
+   //     case 'mylios':
+   //         $ats = km2myles($ka);
+   //         break;
+   //     case 'kilometrai':
+   //         $ats = myles2km($ka):
+   //         break;
+   //         default;
+   //         throw new Exeption('Nesuprantu nieko');
+   // }
+
+//return $ats;
+//}
+include 'konvertavimai.php';
 echo '<br>';
-echo KgPound(10, 'kilogramai');
+echo KM2MILES(100, 'kilometrai');
 echo '<br>';
-echo CelsFaren(10, 'celcijus');
+
+echo KG2POUND(10, 'kilogramai');
+echo '<br>';
+
+echo Cels_Faren(10, 'celsijus');
 echo '<br>';
