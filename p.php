@@ -4,7 +4,6 @@
 
 </body>
 </head>
-
 </html>
 
 
@@ -201,11 +200,23 @@ function CelsFaren($kint, $kas) {
 //}
 include 'konvertavimai.php';
 echo '<br>';
-echo KM2MILES(100, 'kilometrai');
+echo "100 km in myles: " .konvertuoti(100, 'mylios');
+//echo KM2MILES(100, 'kilometrai');
+echo '<br>';
+echo "62.1371 km in myles: " .konvertuoti(62.1371, 'kilometrai');
+//echo KG2POUND(10, 'kilogramai');
 echo '<br>';
 
-echo KG2POUND(10, 'kilogramai');
+echo "25 kg in pound: " .konvertuoti(25, 'pound');
+//echo Cels_Faren(10, 'celsijus');
+echo '<br>';
+echo "45.3592 kg in pound: " .konvertuoti(45.3592, 'kg');
+//echo Cels_Faren(10, 'celsijus');
 echo '<br>';
 
-echo Cels_Faren(10, 'celsijus');
+echo "32 faren in Cels: " .konvertuoti(32, 'farenheitai');
+//echo Cels_Faren(10, 'celsijus');
+echo '<br>';
+echo "30 Cels in faren: " .konvertuoti(30, 'celsijus');
+//echo Cels_Faren(10, 'celsijus');
 echo '<br>';

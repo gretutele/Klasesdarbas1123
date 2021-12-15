@@ -1,7 +1,14 @@
 <?php
 include 'konvert.php';
 
-function konvertavimai(float $kas, string $kaip): float {
+/**
+ * @param float $kas
+ * @param string $kaip
+ * @return float
+ * @throws Exception
+ * @noinspection
+ */
+function konvertuoti(float $kas, string $kaip): float {
     switch ($kaip) {
         case 'mylios':
             $ats = KM2MILES($kas);
@@ -9,20 +16,22 @@ function konvertavimai(float $kas, string $kaip): float {
         case 'kilometrai':
             $ats = MILES2KM($kas);
             break;
+
         case 'poundai':
             $ats = KG2POUND($kas);
             break;
         case 'kilogramai':
-            $ats = KG2POUND($kas);
+            $ats = POUND2KG($kas);
+            break;
+
+        case 'farenheitai':
+            $ats = Faren_Cels($kas);
             break;
         case 'celsijus':
             $ats = Cels_Faren($kas);
             break;
-        case 'farenheitai':
-            $ats = Cels_Faren($kas);
-            break;
         default;
-            throw new Exeption('Nesuprantamas formatas');
+         echo ('Nesuprantamas formatas');
     }
-return $ats;
+    return ($ats);
 }
