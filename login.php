@@ -8,5 +8,5 @@ if (
     $_POST['password'] === 'pass123'
 ) {
     $_SESSION['arPrisijunges'] = true;
-    header("Location: http://localhost:8008/admin");
+    header("Location: http://localhost:/admin");
 }
