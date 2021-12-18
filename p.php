@@ -269,7 +269,7 @@ require_once 'libs/fs.php';
 //
 //saugotiIfaila($filePath, $naujiDuomenys);
 
-include 'admin/Car.php';
+include 'admin/car.php';
 
 $automobilis = new Car();
 
@@ -279,3 +279,4 @@ $automobilis->greitis = 555;
 echo $automobilis->gautiSpalva();
 echo '<br>';
 $automobilis->vaziuoti();
+
